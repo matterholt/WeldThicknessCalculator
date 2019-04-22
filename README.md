@@ -1,0 +1,2 @@
+# WeldThicknessCalculator
+Created with CodeSandbox
