@@ -1,12 +1,12 @@
 import * as React from "react";
 import { render } from "react-dom";
-import AddData from "../src/AddThickness";
+import { MainDataTable } from "../src/MainDataTable";
 
 function App() {
   return (
     <div className="App">
       <div>
-        <AddData />
+        <MainDataTable />
       </div>
     </div>
   );
