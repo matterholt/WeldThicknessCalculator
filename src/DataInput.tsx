@@ -13,7 +13,7 @@ const ContainerInputs = styled.div`
   margin: 0;
   z-index: 1;
   background: rgba(24, 24, 24, 0.9);
-  //visibility: hidden;
+  visibility: hidden;
 `;
 
 const AddData = styled.div`
