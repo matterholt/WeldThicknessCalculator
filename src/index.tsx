@@ -4,25 +4,16 @@ import styled from "@emotion/styled";
 
 import { MainDataTable } from "../src/MainDataTable";
 import { PopUpWindow } from "../src/PopUpThickness";
-import { AppInfo } from "../src/AppWriteUp";
-
-const TEMP = styled.div`
-  background: grey;
-  color: orange;
-  padding: 2rem;
-  display: none;
-`;
+import { ModelTrems } from "../src/ModelTrems";
 
 function App() {
   return (
     <div className="App">
+      <ModelTrems />
       <div>
         <MainDataTable />
       </div>
       <PopUpWindow />
-      <TEMP>
-        <AppInfo />
-      </TEMP>
     </div>
   );
 }
