@@ -1,4 +1,6 @@
-import React from "react";
+import * as React from "react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 
 const DataTerms = [
   "Gauge - Thickness of the Geometry or property",
@@ -11,6 +13,8 @@ const DataTerms = [
   "Loads - a force applied in Newtons",
   "Constraints - boundaries for the FEA model"
 ];
+
+// add some regex to seperate the work from the def, then can style word
 const Terms = () => {
   const listTerms = DataTerms.map(item => <li key={item.id}>{item}</li>);
 

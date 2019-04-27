@@ -2,6 +2,7 @@
 import { jsx, css, keyframes } from "@emotion/core";
 import { useState } from "react";
 import styled from "@emotion/styled";
+import { Purpose } from "../src/dataInfo/AppDetail";
 
 const AnimateIn = keyframes`
   from { 
@@ -11,16 +12,16 @@ const AnimateIn = keyframes`
   }
   to {
 		opacity:1;
-    height: 350px;
-    width: 250px;
+    height: 100vh;
+    width: 50vw;
   }
 }
 `;
 const AnimateOut = keyframes`
   from {
 		opacity:1;
-    height: 350px;
-    width: 250px;
+    height: 100vh;
+    width: 50vw;
   }
   to {
 		opacity:0;
@@ -33,13 +34,14 @@ const AnimateOut = keyframes`
 const Button = styled.button`
   border: none;
   background: white;
-  border-bottom: solid black 3px;
+  border: solid black 1px;
+  border-radius: 2px;
   padding: 0.5rem;
   font-size: 25px;
   :focus {
   }
   :hover {
-    background: pink;
+    box-shadow: 5px 6px 16px grey;
   }
   :active {
   }
@@ -48,46 +50,38 @@ const Button = styled.button`
 const Modal = css`
   display: content;
   position: absolute;
-  background: lightgrey;
+  background: lightblue;
   overflow: hidden;
   height: 1px;
   width: 1px;
+  padding: 0 4rem;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 `;
 const animateIN = css`
   animation-name: ${AnimateIn};
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 `;
 const animateOUT = css`
   animation-name: ${AnimateOut};
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 `;
 
-function SimpleModal({ close, show }) {
-  const showHideClassName = show ? animateIN : animateOUT;
+function SimpleModal({ toggle, bools, info }) {
+  const showHideClassName = bools ? animateIN : animateOUT;
   return (
     <div css={[Modal, showHideClassName]}>
-      <h2> Testing </h2>
-      <p />
-      <Button onClick={close}>Close</Button>
+      <h2> App Description </h2>
+      <Button onClick={toggle}>Close</Button>
+      <Purpose />
     </div>
   );
 }
 
-const PurposeContainer = css`
-  height: 100vh;
-  background: white;
-  margin: 2rem;
-  border-bottom: solid 1px blue;
-`;
+const PurposeContainer = css``;
 
+// TODO for simpleModal , pass
 function ModalTwo() {
   const [view, updateView] = useState(false);
   const ToggleView = () => {
@@ -96,8 +90,8 @@ function ModalTwo() {
   };
   return (
     <div css={PurposeContainer}>
-      <SimpleModal close={ToggleView} show={view} />
-      <Button onClick={ToggleView}>Purpose</Button>
+      <SimpleModal toggle={ToggleView} bools={view} />
+      <Button onClick={ToggleView}>Detail</Button>
     </div>
   );
 }

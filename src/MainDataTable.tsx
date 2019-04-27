@@ -24,7 +24,6 @@ function MainDataTable() {
       <DataAdd />
       <TitleHead>
         <button>Add Guage</button>
-        <h1> Weld Calculator </h1>
       </TitleHead>
 
       <DataList />

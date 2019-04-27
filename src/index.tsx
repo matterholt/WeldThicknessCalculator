@@ -3,9 +3,8 @@ import { render } from "react-dom";
 import styled from "@emotion/styled";
 
 import { MainDataTable } from "../src/MainDataTable";
-import { PopUpWindow } from "../src/PopUpThickness";
-import { ModelTrems } from "../src/ModelTrems";
-import { ModalTwo } from "../src/ModalTwo";
+//import { PopUpWindow } from "../src/PopUpThickness";
+import { Header } from "../src/Header";
 
 const TEST = styled.div`
   background: pink;
@@ -14,14 +13,12 @@ const TEST = styled.div`
 function App() {
   return (
     <div className="App">
-      <ModelTrems />
+      <Header />
       <div>
         <MainDataTable />
       </div>
-      <PopUpWindow />
       <TEST>
         <h1>TEEST</h1>
-        <ModalTwo />
       </TEST>
     </div>
   );
