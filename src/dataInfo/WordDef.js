@@ -12,7 +12,7 @@ const DataTerms = [
   "Constraints - boundaries for the FEA model"
 ];
 const Terms = () => {
-  const listTerms = DataTerms.map(item => <li>{item}</li>);
+  const listTerms = DataTerms.map(item => <li key={item.id}>{item}</li>);
 
   return (
     <div>

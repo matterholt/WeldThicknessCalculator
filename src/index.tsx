@@ -5,6 +5,11 @@ import styled from "@emotion/styled";
 import { MainDataTable } from "../src/MainDataTable";
 import { PopUpWindow } from "../src/PopUpThickness";
 import { ModelTrems } from "../src/ModelTrems";
+import { ModalTwo } from "../src/ModalTwo";
+
+const TEST = styled.div`
+  background: pink;
+`;
 
 function App() {
   return (
@@ -14,6 +19,10 @@ function App() {
         <MainDataTable />
       </div>
       <PopUpWindow />
+      <TEST>
+        <h1>TEEST</h1>
+        <ModalTwo />
+      </TEST>
     </div>
   );
 }
