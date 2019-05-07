@@ -4,7 +4,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 
-const Button = styled.button`
+const Button_style = styled.button`
   border: none;
   background: white;
   border: solid black 1px;
@@ -22,6 +22,6 @@ const Button = styled.button`
 
 function Button_comp (Name){
   return(
-    < Button > {Name}  <Button />
+    <Button_style> {Name}  <Button_style/>
   )
 }
