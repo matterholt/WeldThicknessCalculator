@@ -36,35 +36,10 @@ const InputPart = styled.input`
   border-bottom: solid 2px black;
   text-align: center;
 `;
-const TitlePart = props => {
-  return <InputPart type="text" placeholder="Part Name" />;
-};
-
-const TitleGauge = props => {
-  return (
-    <input
-      type="number"
-      step="0.01"
-      name={props.ThicknessTitle}
-      placeholder="mm"
-    />
-  );
-};
 
 function DataAdd() {
   const [weldData, updateWeldData] = useState([{ partName: " ", gauge: "" }]);
-  return (
-    <ContainerInputs>
-      <AddData>
-        <TitleThickness />
-        <TitlePart />
-        <TitleGauge ThicknessTitle="Thicknes A" />
-        <TitlePart />
-        <TitleGauge ThicknessTitle="Thicknes B" />
-        <button>Add</button>
-      </AddData>
-    </ContainerInputs>
-  );
+  return <ContainerInputs></ContainerInputs>;
 }
 
 export { DataAdd };

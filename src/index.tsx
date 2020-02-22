@@ -4,11 +4,7 @@ import styled from "@emotion/styled";
 
 //import { MainDataTable } from "../src/MainDataTable";
 //import { PopUpWindow } from "../src/PopUpThickness";
-import { Header } from "../src/Header";
-
-const TEST = styled.div`
-  background: pink;
-`;
+import { Header } from "./Components/Header";
 
 function App() {
   return (
