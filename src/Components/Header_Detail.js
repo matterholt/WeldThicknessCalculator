@@ -35,7 +35,7 @@ function Detail() {
   const [view, updateView] = useState(false);
   const ToggleView = () => {
     updateView(!view);
-    //console.log(view);
+    console.log(view);
   };
   return (
     <div>
