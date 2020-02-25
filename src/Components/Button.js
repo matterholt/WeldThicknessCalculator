@@ -1,27 +1,26 @@
 /** @jsx jsx */
-import { jsx, css, } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import React from "react";
 import styled from "@emotion/styled";
 
-
 const Button_style = styled.button`
   border: none;
+  text-align: center;
   background: white;
-  border: solid black 1px;
   border-radius: 2px;
-  padding: 0.5rem;
-  font-size: 25px;
+  font-size: 15px;
+  height: 25px;
+  width: 25px;
   :focus {
   }
   :hover {
+    background: lightgrey;
     box-shadow: 5px 6px 16px grey;
   }
   :active {
   }
 `;
 
-function Button_comp (Name){
-  return(
-    <Button_style> {Name}  <Button_style/>
-  )
+export default function Button_comp({ Name, toggle }) {
+  return <Button_style onClick={toggle}> {Name} </Button_style>;
 }

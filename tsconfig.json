@@ -1,12 +1,24 @@
 {
-    "include": [
-        "./src/*"
+  "include": [
+    "./src/*", "src/old_/NEEDUPDATE_PopUpThickness.tsx", "src/Components/Header.js", "src/Components/model.js", "src/Components/projectInfo.js"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "es2015"
     ],
-    "compilerOptions": {
-        "lib": [
-            "dom",
-            "es2015"
-        ],
-        "jsx": "react"
-    }
+    "jsx": "preserve",
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  }
 }
